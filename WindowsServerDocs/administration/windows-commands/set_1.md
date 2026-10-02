@@ -60,11 +60,12 @@ set /a <variable>=<expression>
   | `+ -` | Arithmetic |
   | `<< >>` | Logical shift |
   | `&` | Bitwise AND |
+  | `|` | Bitwise OR |
   | `^` | Bitwise exclusive OR |
   | `= *= /= %= += -= &= ^=` | `= <<= >>=` |
   | `,` | Expression separator |
 
-- If you use logical (`&&` or `||`) or modulus (**%**) operators, enclose the expression string in quotation marks. Any non-numeric strings in the expression are considered environment variable names, and their values are converted to numbers before they're processed. If you specify an environment variable name that isn't defined in the current environment, a value of zero is allotted, which allows you to perform arithmetic with environment variable values without using the % to retrieve a value.
+- If you use the logical operators (`&&` or `||`), the bitwise OR operator (`|`), or the modulus (**%**) operator, enclose the expression string in quotation marks. Any non-numeric strings in the expression are considered environment variable names, and their values are converted to numbers before they're processed. If you specify an environment variable name that isn't defined in the current environment, a value of zero is allotted, which allows you to perform arithmetic with environment variable values without using the % to retrieve a value.
 
 - If you run **set /a** from the command line outside of a command script, it displays the final value of the expression.
 
